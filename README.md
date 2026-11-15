@@ -33,6 +33,14 @@ make remove
 
 See [`calibre-customize` docs](https://manual.calibre-ebook.com/generated/en/calibre-customize.html) for more options.
 
+Run the upload-path regression tests with Calibre's Python runtime:
+
+```sh
+calibre-debug -e tests/test_upload_paths.py
+```
+
+These tests are skipped when discovered by a Python interpreter without Calibre.
+
 ### Releasing
 
 The version is read from the `version` tuple in `crosspoint_reader/driver.py`.

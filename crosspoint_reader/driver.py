@@ -296,7 +296,7 @@ class CrossPointDevice(DeviceConfig, DevicePlugin):
         """
         try:
             from calibre.library.save_to_disk import config as sconfig, get_components
-            from calibre.utils.filenames import ascii_filename
+            from calibre import sanitize_file_name
 
             template = PREFS['upload_template']
             if not template:
@@ -310,7 +310,7 @@ class CrossPointDevice(DeviceConfig, DevicePlugin):
 
             components = get_components(
                 template, mi, book_id, '%b %Y', 250,
-                ascii_filename, to_lowercase=False,
+                sanitize_file_name, to_lowercase=False,
                 replace_whitespace=False, safe_format=True,
                 last_has_extension=False,
             )

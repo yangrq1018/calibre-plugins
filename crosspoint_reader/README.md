@@ -16,6 +16,8 @@ Default settings:
 - Port: 81
 - Upload path: /
 - Upload template: blank, which uses Calibre's send-to-device template
+- Template-generated folder and file names preserve Unicode, including Chinese,
+  Japanese, and accented characters. Invalid filename characters are still sanitized.
 - Upload reliability: 3 retries, 2s retry delay, 1s delay between books,
   30s socket timeout
 
